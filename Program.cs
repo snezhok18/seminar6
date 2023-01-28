@@ -7,6 +7,38 @@
 // метод string[] numS = stringArray.Split(' ', StringSplitOptions.RemoveEmptyEntries)
 // (пользователь вводит в консоли числа через пробел и они формируют строку)
 
+Console.WriteLine("Введите числа через пробел:");
+int[] numbers = ArrayString(Console.ReadLine()!);
+Console.WriteLine($"Количество чисел больше НУЛЯ -> {PositivNumbers(numbers)}");
+
+// -----Method 1-----
+
+int[] ArrayString(string stringArr)
+{
+string[] nums = stringArr.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+int[] result = new int[nums.Length];
+for (int i = 0; i < result.Length; i++)
+{
+    result[i] = int.Parse(nums[i]);
+    System.Console.WriteLine(result[i]);
+}
+return result;
+}
+
+// -----Method 2-----
+
+int PositivNumbers(int[] array)
+{
+    int count = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] > 0)
+        {
+            count += 1;
+        }
+    }
+    return count;
+}
 
 
 // Задача 43:

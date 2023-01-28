@@ -46,43 +46,43 @@
 // а на выходе выводит этот же массив, но отсортированный по 
 // возрастанию(от меньшего числа к большему).
 
-int size = new Random().Next(6, 15);
-Console.WriteLine($"В массиве будет {size} элементов");
-int[] array = OurArray(size);
-Console.WriteLine($"[{String.Join(", ", array)}]");
-SortArray(array);
-Console.WriteLine($"[{String.Join(", ", array)}]");
+// int size = new Random().Next(6, 15);
+// Console.WriteLine($"В массиве будет {size} элементов");
+// int[] array = OurArray(size);
+// Console.WriteLine($"[{String.Join(", ", array)}]");
+// SortArray(array);
+// Console.WriteLine($"[{String.Join(", ", array)}]");
 
 
-// --- Метод формирования массива случайных чисел ---
-int[] OurArray(int size)
-{
-    int[] arr = new int[size];
-    for (int i = 0; i < arr.Length; i++)
-    {
-        arr[i] = new Random().Next(101);
-    }
-    return arr;
-}
-// ---
+// // --- Метод формирования массива случайных чисел ---
+// int[] OurArray(int size)
+// {
+//     int[] arr = new int[size];
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         arr[i] = new Random().Next(101);
+//     }
+//     return arr;
+// }
+// // ---
 
 
-// --- Метод сортировки массива в порядке возрастания ---
+// // --- Метод сортировки массива в порядке возрастания ---
 
-void SortArray(int[] array)
-{
-    for (int i = 0; i < array.Length - 1; i++)
-    {
-        for (int j = i + 1; j < array.Length; j++)
-        {
-            if (array[i] > array[j])
-            {
-                int temp = array[i];
-                array[i] = array[j];
-                array[j] = temp;
-            }
-        }
-    }
-}
+// void SortArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length - 1; i++)
+//     {
+//         for (int j = i + 1; j < array.Length; j++)
+//         {
+//             if (array[i] > array[j])
+//             {
+//                 int temp = array[i];
+//                 array[i] = array[j];
+//                 array[j] = temp;
+//             }
+//         }
+//     }
+// }
 
-// ---
+// // ---
